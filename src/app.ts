@@ -1,5 +1,6 @@
 import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
+import { clear } from 'console';
 
 const app: Application = express();
 
@@ -8,9 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/', (req: Request, res: Response) => {
-  
-    const a = 10;
-  res.send(a);
+  res.send('Hello');
 });
 
 export default app;
